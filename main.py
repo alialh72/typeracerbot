@@ -21,13 +21,13 @@ body = driver.find_element_by_class_name("redesign")
 body.send_keys(Keys.CONTROL, Keys.ALT, "O")
 
 time.sleep(5)
-firsttext = driver.find_element_by_xpath("//*[@id='gwt-uid-17']/table/tbody/tr[2]/td/table/tbody/tr[1]/td/table/tbody/tr[1]/td/div/div/span[1]").get_attribute('innerHTML')
-secondtext = driver.find_element_by_xpath("//*[@id='gwt-uid-17']/table/tbody/tr[2]/td/table/tbody/tr[1]/td/table/tbody/tr[1]/td/div/div/span[2]").get_attribute('innerHTML')
 
+firsttext = driver.find_element_by_xpath("//*[@id='gwt-uid-20']/table/tbody/tr[2]/td/table/tbody/tr[1]/td/table/tbody/tr[1]/td/div/div/span[1]").get_attribute('innerHTML')
+secondtext = driver.find_element_by_xpath("//*[@id='gwt-uid-20']/table/tbody/tr[2]/td/table/tbody/tr[1]/td/table/tbody/tr[1]/td/div/div/span[2]").get_attribute('innerHTML')
 thirdtext = ""
 
-if check_exists_by_xpath("//*[@id='gwt-uid-17']/table/tbody/tr[2]/td/table/tbody/tr[1]/td/table/tbody/tr[1]/td/div/div/span[3]"):
-    thirdtext = driver.find_element_by_xpath("//*[@id='gwt-uid-17']/table/tbody/tr[2]/td/table/tbody/tr[1]/td/table/tbody/tr[1]/td/div/div/span[3]").get_attribute('innerHTML')
+if check_exists_by_xpath("//*[@id='gwt-uid-20']/table/tbody/tr[2]/td/table/tbody/tr[1]/td/table/tbody/tr[1]/td/div/div/span[3]"):
+    thirdtext = driver.find_element_by_xpath("//*[@id='gwt-uid-20']/table/tbody/tr[2]/td/table/tbody/tr[1]/td/table/tbody/tr[1]/td/div/div/span[3]").get_attribute('innerHTML')
 
 
 fulltext = firsttext + secondtext + thirdtext
@@ -38,5 +38,5 @@ inputfield = driver.find_element_by_class_name("txtInput")
 
 for i in fulltext:
     inputfield.send_keys(i)
-    time.sleep(0.05)    #change speed here, the smaller the number, the faster
+    time.sleep(0.01)    #change speed here, the smaller the number, the faster
 
